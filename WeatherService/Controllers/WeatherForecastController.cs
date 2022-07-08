@@ -18,12 +18,12 @@ namespace WeatherService.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetForecast")]
         public WeatherForecast Get()
         {
             WeatherForecast forecast = WeatherService.Implementations.WeatherForecastImplementation.GetWeatherForecast();
 
-            //todo: set Summary value on forecast
+            //todo: set Summary value on forecast response using Summaries data dictionary
 
             return forecast;
         }
